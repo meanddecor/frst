@@ -12,7 +12,6 @@ const Inc5000Icon = () => (
 // Data array for the grid items.
 const statsData = [
   {
-
     largeStat: '$200 mil.',
     title: '#385 on the Inc. 5000',
     description: 'Our strict focus on maximizing ROI for our clients landed us as the 385th fastest growing private company in America in 2023 according to the Inc. 5000.',
@@ -34,14 +33,11 @@ const statsData = [
  */
 const StatsGrid = () => {
   return (
-    <section className=" text-white ">
+    <section className="text-white px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+        <div className="grid grid-cols-1 divide-y divide-white/10 md:grid-cols-3 md:divide-y-0 md:divide-x">
           {statsData.map((item, index) => (
-            <div key={index} className="flex space-x-6">
-              {/* Vertical Divider */}
-              <div className="w-0.5 flex-shrink-0 bg-white/10"></div>
-              
+            <div key={index} className="px-4 py-12 sm:px-6 lg:px-8">
               <div className="flex flex-col">
                 {/* Conditionally render icon or large stat text */}
                 {item.icon ? (
@@ -49,17 +45,17 @@ const StatsGrid = () => {
                     {item.icon}
                   </div>
                 ) : (
-                  <p className="text-4xl lg:text-5xl font-bold text-gray-500 h-28 flex items-start">
+                  <p className="text-4xl lg:text-5xl font-semibold text-gray-500 h-16 flex items-start">
                     {item.largeStat}
                   </p>
                 )}
 
                 {/* Title and Description */}
                 <div className="flex flex-col space-y-4">
-                  <h3 className="text-lg font-semibold text-white tracking-wide">
+                  <h3 className="text-lg font-medium text-white tracking-wide">
                     {item.title}
                   </h3>
-                  <p className="text-gray-400 text-base leading-relaxed tracking-wide">
+                  <p className="text-gray-400 text-base font-light leading-relaxed tracking-wide">
                     {item.description}
                   </p>
                 </div>

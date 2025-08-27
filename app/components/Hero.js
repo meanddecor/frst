@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="hero mt-24" aria-label="Intro">
+    <section className="hero mt-4" aria-label="Intro">
       <div className="hero-inner">
         <h1 className="hero-title">
           unlock the next
@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="hero-cta">
         <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-md bg-neutral-200/80 px-4 py-3 text-sm font-medium text-black
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-neutral-200/80 px-3 py-2 text-sm font-medium text-black
                            ring-1 ring-black/10 hover:bg-neutral-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
                 aria-label="Book a call"
               >
@@ -32,7 +32,7 @@ export default function Hero() {
 
               <Link
                 href="/work"
-                className="inline-flex items-center rounded-md px-4 py-3 text-sm font-medium
+                className="inline-flex items-center justify-center rounded-md px-3 py-2 text-sm font-medium
                            ring-1 ring-white/80 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
                 aria-label="Begin your journey"
               >
@@ -62,8 +62,10 @@ export default function Hero() {
 
         .hero-cta{display:flex; gap:clamp(8px,2vw,12px); margin-top:clamp(12px,3vw,24px)}
         @media (max-width:600px){
-          .hero-cta{flex-direction:column; width:100%}
-          .hero-cta :global(a), .hero-cta :global(button){width:100%}
+          .hero-cta{
+            transform: scale(0.9);
+            transform-origin: left;
+          }
         }
       `}</style>
     </section>

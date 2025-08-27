@@ -174,18 +174,28 @@ export default function ServicesSection() {
 
     const onWheel = (e) => {
       if (!isCoveringViewport()) return;
-      e.preventDefault();
 
       const direction = e.deltaY > 0 ? 1 : -1;
+
+      // If at the start and scrolling up, or at the end and scrolling down,
+      // allow the default browser scroll to take over.
+      if (
+        (logicalIndexRef.current === 0 && direction === -1) ||
+        (logicalIndexRef.current === services.length - 1 && direction === 1)
+      ) {
+        return;
+      }
+
+      e.preventDefault();
       const velocity = e.deltaY;
-      
+
       scrollQueueRef.current.push({ direction, velocity });
-      
+
       if (!isAnimatingRef.current) {
         processQueue();
       }
     };
-    
+
     el.addEventListener('wheel', onWheel, { passive: false });
     return () => el.removeEventListener('wheel', onWheel);
 

@@ -23,12 +23,11 @@ const ProvenTrackRecord = () => {
   ];
 
   return (
-    <section className="relative  text-white mt-12">
+    <section className="relative text-white mt-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <header className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-medium leading-tight">
-            A proven track record in performance <br />
-            marketing. <span className="text-gray-500">Recent data points.</span>
+          <h2 className="text-2xl md:text-4xl font-extralight text-center leading-tight">
+            A proven track record in performance marketing. <span className="text-gray-500">Recent data points.</span>
           </h2>
         </header>
      
