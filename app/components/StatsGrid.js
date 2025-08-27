@@ -1,0 +1,75 @@
+import React from 'react';
+// Define the shape of a single stat item (informally, since this is JS)
+
+// SVG Icon Component for the first card.
+const Inc5000Icon = () => (
+  <svg className="w-16 h-auto" viewBox="0 0 81 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.88216 21.4115V16.7528H12.7612V5.02895H9.88216V0.0610352H24.441V5.03862H21.562V16.7625H24.441V21.4115H9.88216ZM38.3549 21.4115V16.7528H40.271V11.9396C40.271 10.4898 39.3082 9.85189 37.8734 9.85189C36.2749 9.85189 34.9943 10.9731 34.8307 12.5775V12.7418V16.7528H36.9105V21.4115H25.7218V16.7528H27.6378V9.85189H25.7218V5.19326H34.6766V8.40211C34.8403 8.2378 34.9943 8.08316 35.1581 7.91885C36.6023 6.15012 39 5.19326 41.2339 5.3479C44.7484 5.3479 47.6274 6.79769 47.6274 10.6444V16.7432H49.5533V21.4115H38.3549ZM68.1081 11.9396L61.8687 12.5775C61.8687 10.8087 61.3872 9.04968 59.3074 9.04968C56.592 9.04968 56.4283 11.3017 56.4283 13.3894C56.4283 15.6414 56.592 17.8837 59.3074 17.8837C60.588 18.048 61.8687 17.0815 62.0226 15.6317C62.0226 15.4674 62.0226 15.4674 62.0226 15.3127H68.2622V15.796C67.2993 20.9379 62.6679 21.7401 59.4614 21.7401C54.3388 21.7401 49.2259 19.1692 49.2259 13.3894C49.2259 7.60956 54.3485 5.03862 59.4614 5.03862C59.3074 5.19326 67.4727 4.71 68.1081 11.9396ZM72.9033 18.8405C72.9033 20.2903 71.7864 21.4115 70.342 21.4115C68.8978 21.4115 67.7808 20.2903 67.7808 18.8405C67.7808 17.3908 68.8978 16.2696 70.342 16.2696C71.7864 16.2696 72.9033 17.4004 72.9033 18.8405ZM29.0822 23.4992C22.8426 23.4992 19.3281 27.6745 19.3281 35.861C19.3281 44.0474 22.8426 48.2228 29.0822 48.2228C35.3217 48.2228 38.8362 44.0474 38.8362 35.861C38.8362 27.6745 35.1581 23.4992 29.0822 23.4992ZM29.0822 43.2452C26.8387 43.2452 26.3669 40.9932 26.3669 35.861C26.3669 30.7287 26.8483 28.4767 29.0822 28.4767C31.3161 28.4767 31.7976 30.7287 31.7976 35.861C31.7976 40.9932 31.3161 43.2452 29.0822 43.2452ZM49.7169 23.4992C43.4775 23.4992 39.9629 27.6745 39.9629 35.861C39.9629 44.0474 43.4775 48.2228 49.7169 48.2228C55.9565 48.2228 59.471 44.0474 59.471 35.861C59.471 27.6745 55.7929 23.4992 49.7169 23.4992ZM49.7169 43.2452C47.4735 43.2452 47.0017 40.9932 47.0017 35.861C47.0017 30.7287 47.483 28.4767 49.7169 28.4767C51.9605 28.4767 52.4323 30.7287 52.4323 35.861C52.4323 40.9932 51.9508 43.2452 49.7169 43.2452ZM70.3517 23.4992C64.1121 23.4992 60.5976 27.6745 60.5976 35.861C60.5976 44.0474 64.1121 48.2228 70.3517 48.2228C76.5913 48.2228 80.1058 44.0474 80.1058 35.861C80.1058 27.6745 76.4275 23.4992 70.3517 23.4992ZM70.3517 43.2452C68.1081 43.2452 67.6363 40.9932 67.6363 35.861C67.6363 30.7287 68.1178 28.4767 70.3517 28.4767C72.5953 28.4767 73.0671 30.7287 73.0671 35.861C73.0671 40.9932 72.5856 43.2452 70.3517 43.2452ZM16.4491 33.4543C14.8411 32.1689 12.9249 31.3666 10.845 31.5213C9.24664 31.5213 7.48455 32.0046 6.3676 33.1257L6.84905 29.2693H16.9209V23.6538H2.20791L0.609511 34.8944L4.93289 37.1464C6.04985 36.1799 7.33049 35.542 8.77483 35.542C9.57403 35.542 10.2192 35.861 10.8547 36.3442C11.6539 37.1464 11.9716 38.2676 11.9716 39.3984C11.9716 39.8817 11.9716 40.365 11.8079 40.6839C11.6442 42.1337 10.3636 43.0905 8.92889 42.9359C6.21353 42.9359 6.3676 39.5627 7.01274 38.2773L0.137695 41.9694C0.619141 46.3091 5.09658 48.3871 8.77483 48.3871C11.3361 48.3871 13.7337 47.5849 15.4958 45.9804C16.1313 45.3425 16.7765 44.695 17.258 43.7284C18.0571 42.443 18.3748 40.8386 18.3748 39.3888C18.683 37.1464 17.8837 35.0588 16.4491 33.4543Z" fill="#3B3B3B"/>
+    <path d="M79.9807 -2.04004H0.137695V48.3871H79.9807V-2.04004Z" fill="#A4A4AC"/>
+  </svg>
+);
+
+// Data array for the grid items.
+const statsData = [
+  {
+
+    largeStat: '$200 mil.',
+    title: '#385 on the Inc. 5000',
+    description: 'Our strict focus on maximizing ROI for our clients landed us as the 385th fastest growing private company in America in 2023 according to the Inc. 5000.',
+  },
+  {
+    largeStat: '$200 mil.',
+    title: '$200M in ad spend',
+    description: 'We manage over $200 million in annual advertising spend across our integrated media networks, driving measurable performance at scale for our partners.',
+  },
+  {
+    largeStat: '$5 bil.',
+    title: '$5b in attributable revenue',
+    description: 'We’ve collectively driven over $5 billion dollars in trackable revenue for our clients across platforms we’ve managed, with influenced revenue in the multi-billion dollar range.',
+  },
+];
+
+/**
+ * A responsive grid component that displays key company statistics.
+ */
+const StatsGrid = () => {
+  return (
+    <section className=" text-white ">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+          {statsData.map((item, index) => (
+            <div key={index} className="flex space-x-6">
+              {/* Vertical Divider */}
+              <div className="w-0.5 flex-shrink-0 bg-white/10"></div>
+              
+              <div className="flex flex-col">
+                {/* Conditionally render icon or large stat text */}
+                {item.icon ? (
+                  <div className="h-28 flex items-start" aria-hidden="true">
+                    {item.icon}
+                  </div>
+                ) : (
+                  <p className="text-4xl lg:text-5xl font-bold text-gray-500 h-28 flex items-start">
+                    {item.largeStat}
+                  </p>
+                )}
+
+                {/* Title and Description */}
+                <div className="flex flex-col space-y-4">
+                  <h3 className="text-lg font-semibold text-white tracking-wide">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-400 text-base leading-relaxed tracking-wide">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default StatsGrid;
